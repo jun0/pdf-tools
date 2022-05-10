@@ -626,7 +626,7 @@ windows."
 Optional parameter N moves N pages forward."
   (interactive "p")
   (if pdf-view-roll-minor-mode
-      (image-roll-next-page n)
+      (image-roll-next-page (or n 1))
     (pdf-view-goto-page (+ (pdf-view-current-page)
                            (or n 1)))))
 
